@@ -25,8 +25,21 @@ This application creates a simulation of data generation and implements a synchr
 ----------------
 
 The application is built with clean architecture principles and follows the MVI pattern:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   app/  ├── src/main/      ├── java/com/yourpackage/          ├── data/               # Data layer          │   ├── datasource/     # Local and remote data sources          │   ├── model/          # Data models          │   └── repository/     # Repository implementations          ├── di/                 # Dependency injection          ├── domain/             # Domain layer          │   ├── model/          # Domain models          │   └── usecase/        # Business logic use cases          ├── ui/                 # Presentation layer (MVI)          │   ├── datasimulator/  # Data generation simulator          │   └── synchronizer/   # Data synchronization UI          └── utils/              # Utility classes   `
+app/  
+├── src/main/      
+├── java/com/yourpackage/          
+├── data/               # Data layer          
+│   ├── datasource/     # Local and remote data sources          
+│   ├── model/          # Data models          
+│   └── repository/     # Repository implementations          
+├── di/                 # Dependency injection          
+├── domain/             # Domain layer          
+│   ├── model/          # Domain models          
+│   └── usecase/        # Business logic use cases          
+├── ui/                 # Presentation layer (MVI)          
+│   ├── datasimulator/  # Data generation simulator          
+│   └── synchronizer/   # Data synchronization UI          
+└── utils/              # Utility classes   `
 
 🛠️ Tech Stack
 --------------
