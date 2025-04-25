@@ -56,6 +56,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.room.common.jvm)
+    implementation(libs.androidx.room.runtime.android)
+    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -77,4 +79,9 @@ dependencies {
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.messaging.ktx)
     implementation (libs.firebase.functions)
+    implementation(libs.hilt.navigation.compose)
+
+    runtimeOnly("androidx.room:room-runtime:2.7.1")
+    // https://mvnrepository.com/artifact/androidx.room/room-compiler
+    kapt("androidx.room:room-compiler:2.7.1")
 }
