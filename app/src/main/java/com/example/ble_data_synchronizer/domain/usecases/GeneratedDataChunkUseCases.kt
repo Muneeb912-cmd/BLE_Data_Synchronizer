@@ -15,7 +15,7 @@ class GenerateDataChunksUseCase @Inject constructor(
     fun generateDataChunks(intervalMs: Long): Flow<DataChunk> = flow {
         while (true) {
             val dataChunk = repository.generateDataChunk(
-                "BLE Data ${UUID.randomUUID().toString().substring(0, 8)} at ${System.currentTimeMillis()}"
+                "Random Data ${UUID.randomUUID().toString().substring(0, 8)} at ${System.currentTimeMillis()}"
             )
             emit(dataChunk)
             delay(intervalMs)

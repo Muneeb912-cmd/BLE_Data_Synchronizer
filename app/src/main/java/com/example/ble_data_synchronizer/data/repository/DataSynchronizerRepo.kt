@@ -63,18 +63,6 @@ class DataSynchronizerRepository @Inject constructor(
         }
     }
 
-    // Store multiple data chunks locally
-    suspend fun storeDataChunks(chunks: List<DataChunk>) {
-        withContext(Dispatchers.IO) {
-            dataChunkDao.insertDataChunks(chunks)
-
-            // If connected, attempt to upload
-            if (connectionStatus.value == ConnectionStatus.AVAILABLE) {
-                synchronizePendingData()
-            }
-        }
-    }
-
     // Upload a single data chunk
     private suspend fun uploadDataChunk(dataChunk: DataChunk) {
         withContext(Dispatchers.IO) {
